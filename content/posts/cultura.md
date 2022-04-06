@@ -1,6 +1,6 @@
 ---
 title: "La cultura de un profesional del software"
-date: 2022-04-06T18:16:21-06:00
+date: 2022-04-06T18:53:21-06:00
 description: 'En este post expreso mis punto de vista acerca de la cultura en el desarrollo de software'
 ---
 
