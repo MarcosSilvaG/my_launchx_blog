@@ -1,6 +1,6 @@
 ---
 title: "La cultura de un Desarrollador de Software"
-date: 2022-02-21T18:16:21-06:00
+date: 2022-04-06T18:16:21-06:00
 description: 'En este post agregaré mi perspectiva acerca de la cultura del desarrollador de software.'
 ---
 
