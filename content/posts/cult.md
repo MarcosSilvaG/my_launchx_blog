@@ -5,11 +5,12 @@ description: 'Este es mi punto de vista acerca de la cultura profesional en el d
 ---
 Para mí, la cultura de un profesional del desarrollo de software se debe basar en lo siguiente:
 
-Comunicación asertiva.
-Autogestión.
-Curiosidad.
-Trabajo en equipo.
-Honestidad.
-Creatividad.
-Actitud de ayuda con los que conocen menos o tienen menos práctica en una tecnología.
+- Comunicación asertiva.
+- Autogestión.
+- Curiosidad.
+- Trabajo en equipo.
+- Honestidad.
+- Creatividad.
+- Actitud de ayuda con los que conocen menos o tienen menos práctica en una tecnología.
+
 Las actitudes en este listado las considero importantes para desenvolverse en un área que requiere de la comunicación y el trabajo en equipo, para así poder entregar productos de calidad.
