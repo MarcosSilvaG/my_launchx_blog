@@ -3,7 +3,6 @@ on: push
 
 jobs:
   build:
-
     name: Build and update website
     runs-on: ubuntu-latest
 
