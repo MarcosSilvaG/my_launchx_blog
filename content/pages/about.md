@@ -11,12 +11,14 @@ Hola, aquí vas a leer un poco sobre mi 🤖
 
 Un poco de mí... Aprendiendo desarrollo web fullstack
 
-- Ingeniero en sistemas.
-- Amante de los gatos
-- Aprendis de pentesting (actualmente parado para enfocarme al desarrollo web).
-- Videojugador xdd. 
+- -Ingeniero en sistemas.
+- -Amante de los gatos
+- -Aprendis de pentesting (actualmente parado para enfocarme al desarrollo web).
+- -Videojugador xdd. 
 
-**Desaprender es mas dificil que aprender**.
+> **Desaprender es mas dificil que aprender**.
+
+> **Hoy sé más que ayer pero menos que mañana**.
 
 Actualmente me encuentro en un bootcamp para desarrollador fullstack, en el cuál he aprendido tecnologías como VUEJS y
 NodeJS para el backend, aunque tanto front como back son de mi agrado, mis preferencias se inclinan más hacia el backend
