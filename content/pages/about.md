@@ -11,10 +11,10 @@ Hola, aquí vas a leer un poco sobre mi 🤖
 
 Un poco de mí... Aprendiendo desarrollo web fullstack
 
-> Ingeniero en sistemas.
-> Amante de los gatos
-> Aprendis de pentesting (actualmente parado para enfocarme al desarrollo web).
-> Videojugador xdd. 
+- Ingeniero en sistemas.
+- Amante de los gatos
+- Aprendis de pentesting (actualmente parado para enfocarme al desarrollo web).
+- Videojugador xdd. 
 
 **Desaprender es mas dificil que aprender**.
 
