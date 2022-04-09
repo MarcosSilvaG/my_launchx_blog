@@ -6,7 +6,27 @@
     <description>Recent content in Launch X Bitácora de viaje on Bitácora de Viaje de Marcos Joel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Feb 2022 18:16:21 -0600</lastBuildDate><atom:link href="https://marcossilvag.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Apr 2022 18:53:21 -0600</lastBuildDate><atom:link href="https://marcossilvag.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La cultura de un profesional del software.</title>
+      <link>https://marcossilvag.github.io/my_launchx_blog/posts/cultura/</link>
+      <pubDate>Wed, 06 Apr 2022 18:53:21 -0600</pubDate>
+      
+      <guid>https://marcossilvag.github.io/my_launchx_blog/posts/cultura/</guid>
+      <description>Para mí, la cultura de un profesional del desarrollo de software se debe basar en lo siguiente:
+ Comunicación asertiva. Autogestión. Curiosidad. Trabajo en equipo. Honestidad. Creatividad. Actitud de ayuda con los que conocen menos o tienen menos práctica en una tecnología.  Las actitudes en este listado las considero importantes para desenvolverse en un área que requiere de la comunicación y el trabajo en equipo, para así poder entregar productos de calidad.</description>
+    </item>
+    
+    <item>
+      <title>La cultura de un profesional del software.</title>
+      <link>https://marcossilvag.github.io/my_launchx_blog/posts/post_2/</link>
+      <pubDate>Wed, 06 Apr 2022 18:53:21 -0600</pubDate>
+      
+      <guid>https://marcossilvag.github.io/my_launchx_blog/posts/post_2/</guid>
+      <description>Para mí, la cultura de un profesional del desarrollo de software se debe basar en lo siguiente:
+ Comunicación asertiva. Autogestión. Curiosidad. Trabajo en equipo. Honestidad. Creatividad. Actitud de ayuda con los que conocen menos o tienen menos práctica en una tecnología.  Las actitudes en este listado las considero importantes para desenvolverse en un área que requiere de la comunicación y el trabajo en equipo, para así poder entregar productos de calidad.</description>
+    </item>
+    
     <item>
       <title>La cultura profesional en el desarrollo de software</title>
       <link>https://marcossilvag.github.io/my_launchx_blog/posts/cult/</link>
@@ -34,9 +54,11 @@ Mis expectativas para este proyecto son:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://marcossilvag.github.io/my_launchx_blog/pages/about/</guid>
-      <description>Who am I Hola, aquí vas a leer un poco sobre mi 🤩
- Excidit gente, si orat suo quaeque dura Calydon nata? Pars auro post stetit adfusique imis amplexus. Agmina per fabricator mittere Erymanthon habetque tot.
- Cineres Nile ipsa origine discurrunt adest Unde, et quem clausus, imo, virens quoque tales, potuit. Ingentes insilit corpore nutricis praebebat roganti licuit. Denique a vestros adulantum in bella lina parte et arte generi di igitur quis, digitis pedes.</description>
+      <description>Who am I Hola, aquí vas a leer un poco sobre mi 🤖
+Un poco de mí&amp;hellip; Aprendiendo desarrollo web fullstack
+ Ingeniero en sistemas. Amante de los gatos Aprendis de pentesting (actualmente parado para enfocarme al desarrollo web). Videojugador xdd.
+ Desaprender es mas dificil que aprender.
+Actualmente me encuentro en un bootcamp para desarrollador fullstack, en el cuál he aprendido tecnologías como VUEJS y NodeJS para el backend, aunque tanto front como back son de mi agrado, mis preferencias se inclinan más hacia el backend ya que permite de alguna manera &amp;ldquo;extraña&amp;rdquo; unir mis dos pasiones, el desarrollo web y la ciberseguridad, en este caso, enfocada a web.</description>
     </item>
     
   </channel>
