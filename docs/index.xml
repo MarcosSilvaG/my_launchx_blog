@@ -13,7 +13,8 @@
       <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://marcossilvag.github.io/my_launchx_blog/posts/post_zsh/</guid>
-      <description>En camino&amp;hellip;</description>
+      <description>Recientemente conocí WSL ( Windows Subsystem for Linux) y se me hizo interesante tener una shell linux dentro de windows ya que ciertos programas no los soporta Linux y los suelo usar a menudo, pero me gusta bastante ese entorno de trabajo para desarrollo por lo que decidí darme la oportunidad de probarlo. Pero como trabajar en una bash default no es tan divertido.
+Decidí configurar la shell para dejarla como la tengo en los sistemas Linux que suelo utilizar.</description>
     </item>
     
     <item>
