@@ -86,9 +86,9 @@ Es una extension de configuración para la shell zsh. Con ella podremos personal
 
 1. Para su instalación simplemente debemos ejecutar el siguiente comando (puede copiarlo y pegarlo directamente en su shell).
 
-    `
+    ```
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    `
+    ```
 
     Una vez instalado nos preguntará si deseamos cambiar la shell por defecto a zsh y debemos presionar la tecla "Y" para confirmar.
 
