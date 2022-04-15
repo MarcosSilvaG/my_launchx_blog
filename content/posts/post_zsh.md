@@ -25,19 +25,19 @@ ___
 
 ## INSTALANDO LA WINDOWS TERMINAL
 
-1. Para instalar la windows terminal basta con ir a la microsoft store, para esto presionaremos la tecla windows en nuestro teclado y escribiremos "microsoft store" e ingresaremos a la app. Una vez cargada desde el buscador teclearemos "windows terminal" y clickearemos al botón de "Obtener" y ¡listo! ya tenemos la windows terminal instalada.
+1. 1.Para instalar la windows terminal basta con ir a la microsoft store, para esto presionaremos la tecla windows en nuestro teclado y escribiremos "microsoft store" e ingresaremos a la app. Una vez cargada desde el buscador teclearemos "windows terminal" y clickearemos al botón de "Obtener" y ¡listo! ya tenemos la windows terminal instalada.
 
     ![download windows terminal](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/download_windows_terminal.jpg?raw=true)
 
-2. Para abrirla  basta con presionar la tecla windows, teclear "terminal" y posteriormente dar enter.
+2. 2.Para abrirla  basta con presionar la tecla windows, teclear "terminal" y posteriormente dar enter.
 
     ![open windows terminal](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/search_windows_terminal.jpg?raw=true)
 
-3. Una vez se abra la terminal nos aparecerá por defecto una powershell (esto podemos cambiarlo despúes), para acceder a nuestra shell bash de ubuntu daremos click en el simbolo 'v' (número 1 en la imagen) y en la lista desplegada seleccionaremos ubuntu (número 2 en la imagen) o la distribución linux que usted haya descargado.
+3. 3.Una vez se abra la terminal nos aparecerá por defecto una powershell (esto podemos cambiarlo despúes), para acceder a nuestra shell bash de ubuntu daremos click en el simbolo 'v' (número 1 en la imagen) y en la lista desplegada seleccionaremos ubuntu (número 2 en la imagen) o la distribución linux que usted haya descargado.
 
     ![open ubuntu shell](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/open_ubuntu_shell.jpg?raw=true)
 
-4. y tadaaan,he aquí nuestra no tan llamativa bash.
+4. 4.y tadaaan,he aquí nuestra no tan llamativa bash.
 
     ![ubuntu view](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/ubuntu_view.jpg?raw=true)
 
@@ -49,15 +49,15 @@ ___
 
 Para poder hacer que la windows terminal pueda renderear los íconos que utilizaremos en la shell zsh necesitamos instalar alguna nerd-font, en este punto dejémoslo como una mauskeherramienta que nos ayudará mas tarde.
 
-1. Nos dirigiremos a la web de [nerd-fonts](https://www.nerdfonts.com/), dentro de la web clickearemos en "FONTS DONWLOADS" para que nos lleve a las fuentes disponibles para descargar.
+1. 1.Nos dirigiremos a la web de [nerd-fonts](https://www.nerdfonts.com/), dentro de la web clickearemos en "FONTS DONWLOADS" para que nos lleve a las fuentes disponibles para descargar.
 
     ![nerdfonts downloads](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/nerdfonts_downloads.jpg?raw=true)
 
-2. Para fines del tutorial y por gusto personal descargaré la fuente "Caskaydia Cove Nerd Font" ya que es la misma fuente que utilizo en vscode, para descargar la fuente basta con dar click en el botón de descargar, lo cual nos guarda un archivo .zip  .
+2. 2.Para fines del tutorial y por gusto personal descargaré la fuente "Caskaydia Cove Nerd Font" ya que es la misma fuente que utilizo en vscode, para descargar la fuente basta con dar click en el botón de descargar, lo cual nos guarda un archivo .zip  .
 
     ![download font](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/donwload_font.jpg?raw=true)
 
-3.  Una vez terminada la descarga nos dirigiremos a la carpeta donde guardamos el archivo, al descomprimirlo nos mostrará 4 archivos de fuente, para instalar la fuente que queremos (en nuestro caso la "Caskaydia Cove Nerd Font Complete Mono") daremos doble click en el archivo y después a instalar.
+3. 3.Una vez terminada la descarga nos dirigiremos a la carpeta donde guardamos el archivo, al descomprimirlo nos mostrará 4 archivos de fuente, para instalar la fuente que queremos (en nuestro caso la "Caskaydia Cove Nerd Font Complete Mono") daremos doble click en el archivo y después a instalar.
 
     ![install nerdfont](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/install_nerdfont.jpg?raw=true)
 
@@ -69,14 +69,14 @@ Para poder hacer que la windows terminal pueda renderear los íconos que utiliza
 
 Ahora necesitaremos instalar la shell zsh en nuestro wsl o wsl2, es algo fácil de hacer con un par de líneas de comando, esto ejecutandolo dentro de nuestro Ubuntu wsl que abrimos al finalizar la parte de instalacion de windows terminal. Si instalaron una distribución de linux diferente puede consultar la documentación de zsh o la documentación de su administrador de paquetes.
 
-1. Ejecutaremos primero 2 lineas de comando, la primera para actualizar los paquetes disponibles y sus versiones, y el segundo para instalar o actualizar los paquetes que el comando anterior encontró y listó (cuando lo ejecutemos nos pedirá la contraseña sudo, es la que configuramos una vez se instaló WSL).
+1. 1.Ejecutaremos primero 2 lineas de comando, la primera para actualizar los paquetes disponibles y sus versiones, y el segundo para instalar o actualizar los paquetes que el comando anterior encontró y listó (cuando lo ejecutemos nos pedirá la contraseña sudo, es la que configuramos una vez se instaló WSL).
 
     ```console
     sudo apt-get update
     sudo apt-get upgrade
     ```
 
-2. Una vez se haya terminado de realizar el upgrade instalaremos la zsh con la siguiente línea .
+2. 2.Una vez se haya terminado de realizar el upgrade instalaremos la zsh con la siguiente línea .
     
     ```console
     sudo apt install zsh -y
@@ -85,7 +85,7 @@ Ahora necesitaremos instalar la shell zsh en nuestro wsl o wsl2, es algo fácil 
 ### INSTALANDO OH-MY-ZSH.
 Es una extension de configuración para la shell zsh. Con ella podremos personalizar fácilmente cualquier cosa en la shell, instalar un tema y poder agregar pluggins.
 
-1. Para su instalación simplemente debemos ejecutar el siguiente comando (puede copiarlo y pegarlo directamente en su shell).
+1. 1.Para su instalación simplemente debemos ejecutar el siguiente comando (puede copiarlo y pegarlo directamente en su shell).
 
     ```console
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -102,13 +102,13 @@ Si desea puede consultar la documentación de [zsh](https://zsh.sourceforge.io/)
 ## INSTALANDO EL TEMA POWERLEVEL10K.
 A continuación instalaremos el tema "powerlevel10k" que nos permite personalizarlo a nuestro gusto de una manera sencilla. Y cuenta con un asistente de configuración el cual es el que hace que sea fácil instalar y personalizar el tema.
 
-1. Para instalarlo ejecutaremos el siguiente comando en la terminal (puede copiarlo y pegarlo en su shell).
+1. 1.Para instalarlo ejecutaremos el siguiente comando en la terminal (puede copiarlo y pegarlo en su shell).
 
     ```console
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
     ```
 
-2. Para activar el tema debemos editar el archivo "~./zshrc" que se encuentra en nuestra carpeta de usuario. Para acceder a dicho archivo teclearemos el siguiente comando en la terminal, sientase libre de utilizar el editor vim o nano, en este tutorial utilizaré el editor nano.
+2. 2.Para activar el tema debemos editar el archivo "~./zshrc" que se encuentra en nuestra carpeta de usuario. Para acceder a dicho archivo teclearemos el siguiente comando en la terminal, sientase libre de utilizar el editor vim o nano, en este tutorial utilizaré el editor nano.
 
     ```console 
     nano ~/.zshrc 
@@ -138,19 +138,19 @@ En cuanto se abre la terminal nos muestra la siguiente pantalla preguntando si p
 
 ¿Cuáles diamantes? si solo tenemos 2 cuadros con signos de interrogación en la pantalla. Bien, en pasos anteriores descargamos una fuente de Nerd-fonts y sí, ha llegado el momento de utilizar esa mauskeherramienta secreta.
 
-1. Primero nos dirigiremos a la sección de configuración de la windows terminal, como se muestra en la siguiente captura de pantalla.
+1. 1.Primero nos dirigiremos a la sección de configuración de la windows terminal, como se muestra en la siguiente captura de pantalla.
 
     ![open configuration](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/open_config.jpg?raw=true)
 
-2. Ya dentro de las configuraciones buscaremos la opción de "Ubuntu" (o la distribución de linux que haya instalado) dentro de los perfiles, y le daremos click,dentro de los valores predeterminados nos moveremos al apartado de apariencia donde se encuentra la opción de cambiar fuente.
+2. 2.Ya dentro de las configuraciones buscaremos la opción de "Ubuntu" (o la distribución de linux que haya instalado) dentro de los perfiles, y le daremos click,dentro de los valores predeterminados nos moveremos al apartado de apariencia donde se encuentra la opción de cambiar fuente.
 
     ![Select font](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/select_font.jpg?raw=true)
 
-3. Seleccionamos la fuente que instalamos y guardamos los cambios.
+3. 3.Seleccionamos la fuente que instalamos y guardamos los cambios.
 
     ![save font](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/select_save_font.jpg?raw=true)
 
-4. Volvemos a nuestra shell y ¡EURECA! al fin vemos el diamante.
+4. 4.Volvemos a nuestra shell y ¡EURECA! al fin vemos el diamante.
 
     ![eureca](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/diamont.jpg?raw=true)
 
@@ -173,79 +173,80 @@ p10k configure
 ```
  >en su shell para poder iniciar el proceso de configuración.
 
-1. A la pregunta de si podemos ver el diamante responderemos con sí presionando la tecla "y" (si es que lo vemos, sino, revisar los pasos anteriores.)
+1. 1.A la pregunta de si podemos ver el diamante responderemos con sí presionando la tecla "y" (si es que lo vemos, sino, revisar los pasos anteriores.)
 
     ![diamont](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/diamont.jpg?raw=true)
 
-2. A la pregunta de si podemos ver el candado respondemos sí presionando la tecla "y".
+2. 2.A la pregunta de si podemos ver el candado respondemos sí presionando la tecla "y".
 
     ![lock](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/lock.jpg?raw=true)
 
-3. A la pregunta de si podemos ver el logo de Debian respondemos sí presionando la tecla "y".
+3. 3.A la pregunta de si podemos ver el logo de Debian respondemos sí presionando la tecla "y".
 
     ![debian](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/debian.jpg?raw=true)
 
-4. A la pregunta de si podemos ver los iconos sin que se solapen con las X  respondemos sí con y, si a usted le aparecen algunos iconos solapados pero en los anteriores 3 pasos pudo ver sin problemas los iconos no se preocupe, puede dar sí presionando la "y"
+4. 4.A la pregunta de si podemos ver los iconos sin que se solapen con las X  respondemos sí con y, si a usted le aparecen algunos iconos solapados pero en los anteriores 3 pasos pudo ver sin problemas los iconos no se preocupe, puede dar sí presionando la "y"
 
     ![overlap](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/icons_overlap.jpg?raw=true)
 
-5. De la lista de prompt style seleccionaré la Classic, esto presionando la tecla número 2.
+5. 5.De la lista de prompt style seleccionaré la Classic, esto presionando la tecla número 2.
 
     ![prompt](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/promp_style.jpg?raw=true)
 
-6. Del character set elegiré el Unicode (tecla 1).
+6. 6.Del character set elegiré el Unicode (tecla 1).
 
     ![character](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/character_set.jpg?raw=true)
 
-7. Del prompt color elegiré el Darck (tecla 3).
+7. 7.Del prompt color elegiré el Darck (tecla 3).
+    
+    ![prompt color](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_color.jpg?raw=true)
 
-
-8. Como no deseo mostrar la hora actual elegiré la opción 1 presionando la tecla número 1.
+8. 8.Como no deseo mostrar la hora actual elegiré la opción 1 presionando la tecla número 1.
 
     ![current time](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/current_time.jpg?raw=true)
 
-9. El separador que me gusta es el de ángulo por lo que presiono la tecla número 1.
+9. 9.El separador que me gusta es el de ángulo por lo que presiono la tecla número 1.
 
+    ![prompt separator](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_separator.jpg?raw=true)
 
-
-10. Para el prompt head me gusta el difumidado (la opción Blurred) por lo que presiono la tecla 2.
+10. 10.Para el prompt head me gusta el difumidado (la opción Blurred) por lo que presiono la tecla 2.
 
     ![prompt head](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_head.jpg?raw=true)
 
-11. Para la prompt tail elijo el difuminado también, presionando la tecla 2.
+11. 11.Para la prompt tail elijo el difuminado también, presionando la tecla 2.
 
     ![prompt tail](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_tail.jpg?raw=true)
 
-12. El prompt height me gusta que sea de una sola línea, así que elijo la opción 1.
+12. 12.El prompt height me gusta que sea de una sola línea, así que elijo la opción 1.
 
     ![prompt height](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_height.jpg?raw=true)
 
-13. El prompt spacing lo selecciono sparce, presionando la tecla 2.
+13. 13.El prompt spacing lo selecciono sparce, presionando la tecla 2.
 
-    aqui va la imagen
+    ![prompt sparce](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_spacing.jpg?raw=true)
 
 
-14. Para los íconos selecciono  la opción 2 para así poder ver mas detalladamente algunas cosas como git. Presionando la tecla 2.
+14. 14.Para los íconos selecciono  la opción 2 para así poder ver mas detalladamente algunas cosas como git. Presionando la tecla 2.
 
     ![icons](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/icons.jpg?raw=true)
 
-15. El prompt flow lo dejaré en Fluent, presionando la tecla 2.
+15. 15.El prompt flow lo dejaré en Fluent, presionando la tecla 2.
 
     ![prompt flow](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_flow.jpg?raw=true)
 
-16. Activaré el aviso transitorio, presionando la tecla "y", esto para que el resultado de los comandos me aparezcan en la parte de arriba y no por abajo.
+16. 16.Activaré el aviso transitorio, presionando la tecla "y", esto para que el resultado de los comandos me aparezcan en la parte de arriba y no por abajo.
 
     ![prompt transient](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/transient_prompt.jpg?raw=true)
 
-17. En el prompt mode seleccionaré la opción Quiet, presionando la tecla 2.
+17. 17.En el prompt mode seleccionaré la opción Quiet, presionando la tecla 2.
 
     ![prompt mode](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/prompt_mode.jpg?raw=true)
 
-18. Seleccionamos la opción de sí para aplicar y guardar los cambios ( en mi caso como ya tenia una instalación previa me pregunta si quiero sobreescribir el archivo, también daré que sí) esto presionando la tecla "y".
+18. 18.Seleccionamos la opción de sí para aplicar y guardar los cambios ( en mi caso como ya tenia una instalación previa me pregunta si quiero sobreescribir el archivo, también daré que sí) esto presionando la tecla "y".
 
     ![accept](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/last_confirm.jpg?raw=true)
 
-19. Listo! hemos configurado la powerlevel10k y este es el resultado final.
+19. 19.!Listo! hemos configurado la powerlevel10k y este es el resultado final.
 
     ![final 1](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/final_prompt.jpg?raw=true)
     ![final 2](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/final_final_prompt.jpg?raw=true)
@@ -297,8 +298,10 @@ sudo su
 
 Para instalar la powerlevel10k en elsuper usuario primero debemos instalarla, para ello ejecutaremos el siguiente comando.
 
-`git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+```console
+git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
 
 Despues de ejecutar el comando de arriba debemos teclear 
 ```console 
@@ -380,7 +383,7 @@ Para realizar esto debemos ejecutar la siguiente línea de código en la shell p
 usermod --shell /usr/bin/zsh root
 ```
 
-Volvemos a ejecutar el comando 
+Volvemos a ejecutar el comando
 ```console
 cat /etc/passwd | grep -E "^root|^washiprah"
 ```
@@ -406,22 +409,22 @@ algunas configuraciones extras que tengo en mi windows terminal, para este pundo
 
 Comenzaremos modificando algunos puntos dentro del apartado de apariencia.
 
-1. Windos terminal nos permite elegir los colores para nuestra terminal, esto en el apartado "combinacion de colores", añadimos uno nuevo y elegimos a nuestro gusto, yo tengo esta combinacion de colores.
+1. 1.Windows terminal nos permite elegir los colores para nuestra terminal, esto en el apartado "combinacion de colores", añadimos uno nuevo y elegimos a nuestro gusto, yo tengo esta combinacion de colores.
 
     ![color](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/colores_sistema.jpg?raw=true)
 
-2. Para poner la combinacion de colores que queremos nos dirigimos a Ubuntu/Apariencia, dentro de esta sección encontramos el apartado de "Combinacion de colores" donde buscaremos la combinacion de colores creada por nosotros y la seleccionamos.
+2. 2.Para poner la combinación de colores que queremos nos dirigimos a Ubuntu/Apariencia, dentro de esta sección encontramos el apartado de "Combinacion de colores" donde buscaremos la combinacion de colores creada por nosotros y la seleccionamos.
 
     ![colors ubuntu](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/washi_colors.jpg?raw=true)
 
-3. Adicionalmente windows terminal nos permite poner una imagen de fondo en la terminal, podemos poner la imagen que tenemos en nuestro desktop o tambien podemos elegir una imagen diferente buscando la ruta. Yo tengo la imagen de mi fondo de pantalla seleccionada con una transpariencia de 35% 
+3. 3.Adicionalmente windows terminal nos permite poner una imagen de fondo en la terminal, podemos poner la imagen que tenemos en nuestro desktop o tambien podemos elegir una imagen diferente buscando la ruta. Yo tengo la imagen de mi fondo de pantalla seleccionada con una transpariencia de 35% 
 
     ![image](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/background_image.jpg?raw=true)
 
-4. Al final de todo el apartado de apariencia viene la opción de "Visibilidad de la barra de desplazamiento", la cual desactivo para que no me aparezca en la shell.
+4. 4.Al final de todo el apartado de apariencia viene la opción de "Visibilidad de la barra de desplazamiento", la cual desactivo para que no me aparezca en la shell.
 
 
-5. Guardamos los cambios dando click en el botón de guardar y ya se reflejan en nuestra shell. 
+5. 5.Guardamos los cambios dando click en el botón de guardar y ya se reflejan en nuestra shell. 
 
     ![mi shell](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/washi_config_colors.jpg?raw=true)
 
@@ -432,12 +435,12 @@ En este punto ya estamos a unos pasos de terminar!! solo haremos un par de cambi
 
 - Cambiaremos solo 2 cosas más
     
-    1. El tamaño del historial, esto es personal, yo solo dejo el tamaño en 50.
-    2. Desactivo la notificación de campana para que deje de estar sonando cuando sucede algo inesperado.
+    1. 1.El tamaño del historial, esto es personal, yo solo dejo el tamaño en 50.
+    2. 2.Desactivo la notificación de campana para que deje de estar sonando cuando sucede algo inesperado.
 
     ![last configurations](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/final_washi_config.jpg?raw=true)
 
-### Seleccionando ubuntu como perfil predeterminado en windows terminal.
+### Seleccionando ubuntu como perfil predeterminado en windows terminal
 
 Para asignar ubuntu como perfil predeterminado para la windows terminal nos dirigiremos a Configuración>Inicio. Donde está la opción de "Perfil predeterminado", seleccionamos ubuntu y guardamos.
 
@@ -452,4 +455,4 @@ Windows Terminal nos permite crear diferentes combinaciones de configuración, p
 
 Por mi parte es todo en este post y espero les haya sido de ayuda, nos vemos en los siguientes que tengo en mente. 
 
-Hasta los próximos!.
+!Hasta los próximos!.
