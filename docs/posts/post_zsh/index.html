@@ -110,21 +110,20 @@
 <li>
 <p>Ejecutaremos primero 2 lineas de comando, la primera para actualizar los paquetes disponibles y sus versiones, y el segundo para instalar o actualizar los paquetes que el comando anterior encontró y listó (cuando lo ejecutemos nos pedirá la contraseña sudo, es la que configuramos una vez se instaló WSL).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">sudo apt-get update
-</span><span class="go">sudo apt-get upgrade```
-</span><span class="go"></span><span class="err">
+</span><span class="go">sudo apt-get upgrade
 </span></code></pre></div></li>
 <li>
 <p>Una vez se haya terminado de realizar el upgrade instalaremos la zsh con la siguiente línea .</p>
-<p><code>sudo apt install zsh -y</code></p>
-</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">sudo apt install zsh -y
+</span></code></pre></div></li>
 </ol>
 <h3 id="instalando-oh-my-zsh">INSTALANDO OH-MY-ZSH.</h3>
 <p>Es una extension de configuración para la shell zsh. Con ella podremos personalizar fácilmente cualquier cosa en la shell, instalar un tema y poder agregar pluggins.</p>
 <ol>
 <li>
 <p>Para su instalación simplemente debemos ejecutar el siguiente comando (puede copiarlo y pegarlo directamente en su shell).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sh -c &#34;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
-</code></pre></div><p>Una vez instalado nos preguntará si deseamos cambiar la shell por defecto a zsh y debemos presionar la tecla &ldquo;Y&rdquo; para confirmar.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">sh -c &#34;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
+</span></code></pre></div><p>Una vez instalado nos preguntará si deseamos cambiar la shell por defecto a zsh y debemos presionar la tecla &ldquo;Y&rdquo; para confirmar.</p>
 </li>
 </ol>
 <p>Si desea puede consultar la documentación de <a href="https://zsh.sourceforge.io/">zsh</a> y <a href="https://ohmyz.sh/">oh-my-zsh</a>.</p>
@@ -134,12 +133,12 @@
 <ol>
 <li>
 <p>Para instalarlo ejecutaremos el siguiente comando en la terminal (puede copiarlo y pegarlo en su shell).</p>
-<p><code> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k</code></p>
-</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+</span></code></pre></div></li>
 <li>
 <p>Para activar el tema debemos editar el archivo &ldquo;~./zshrc&rdquo; que se encuentra en nuestra carpeta de usuario. Para acceder a dicho archivo teclearemos el siguiente comando en la terminal, sientase libre de utilizar el editor vim o nano, en este tutorial utilizaré el editor nano.</p>
-<p><code>nano ~/.zshrc</code></p>
-<p>Este comando nos abrirá el siguiente archivo, en el cuál debermos cambiar <strong>ZSH_THEME=”robbyrussel”</strong> por <strong>ZSH_THEME=”powerlevel10k/powerlevel10k”</strong> , para guardar cambios en el editor nano basta con presionar &ldquo;ctrl S&rdquo; y para salir del editor debemos presionar &ldquo;ctrl x&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">nano ~/.zshrc 
+</span></code></pre></div><p>Este comando nos abrirá el siguiente archivo, en el cuál debermos cambiar <strong>ZSH_THEME=”robbyrussel”</strong> por <strong>ZSH_THEME=”powerlevel10k/powerlevel10k”</strong> , para guardar cambios en el editor nano basta con presionar &ldquo;ctrl S&rdquo; y para salir del editor debemos presionar &ldquo;ctrl x&rdquo;.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/zsh_theme_change.jpg?raw=true" alt="changue theme"></p>
 <p>Si decidió utilizar el editor vim, para editar el archivo primero debe presionar la tecla &ldquo;i&rdquo; para que pueda editar el documento, una vez realizado el cambio debe guardar y salir del edito, esto lo logrará presionando la tecla de escape para salir del modo de inserción, después teclar lo siguiente &ldquo;:wq&rdquo; (dos puntos, wq) para que se escriban los cambios y salga del editor (ATENCION: despues de precionar la tecla de escape &ldquo;Esc&rdquo; todo lo que escriba se reflejara en la parte inferior de la pantalla como se muestra a continuación).</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/change_zsh_path_vim.jpg?raw=true" alt="vim changue theme"></p>
@@ -174,7 +173,7 @@
 <p>Si no le aparece la fuente es posible que su sistema operativo aún no la detecte, si despues de presionar en mostrar todas las fuentes sigue sin aparecerle, sugiero que reinicien su sistema operativo y vuelva a abrir la windows terminal para seleccionar la fuente.</p>
 </blockquote>
 <blockquote>
-<p>Si despues del reinicio no le aparece la pantalla de la powerlevel10k donde pregunta por el diamante no se preocupe, solo escriba en su temrinal <code>p10k configure</code> y podrá acceder a dicha pantalla.</p>
+<p>Si despues del reinicio no le aparece la pantalla de la powerlevel10k donde pregunta por el diamante no se preocupe, solo escriba en su temrinal <strong><code>p10k configure</code></strong> y podrá acceder a dicha pantalla.</p>
 </blockquote>
 <hr>
 <h2 id="configuracion-de-la-powerlevel10k">CONFIGURACION DE LA POWERLEVEL10K.</h2>
@@ -183,7 +182,11 @@
 <p>¡IMPORTANTE!: Los pasos que describiré a continuación son para dejar la shell con la configuración que a mi me gusta y con la que me siento cómodo, sientase libre de experimentar las dierentes opciones que nos ofrece la powerlevel10k que como verá, es fácil de configurar.</p>
 </blockquote>
 <blockquote>
-<p>Si en un futuro desea cambiar su configuración para probar nuevas opciones basta con ejecutar <code>p10k configure</code> en su shell para poder iniciar el proceso de configuración.</p>
+<p>Si en un futuro desea cambiar su configuración para probar nuevas opciones basta con ejecutar</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">p10k configure
+</span></code></pre></div><blockquote>
+<p>en su shell para poder iniciar el proceso de configuración.</p>
 </blockquote>
 <ol>
 <li>
@@ -265,8 +268,8 @@
 <p>Hasta aquí nuestra shell ya está configurada y puede ser utilizada tal cual, pero, a pesar de eso hay algunas modificaciones adicionales que se le pueden hacer ya que la p10k nos lo permite, esto como dije ya es a gusto personal y pueden o no seguir con el tutorial a partir de aquí, si aún hay alguien que quiera seguir pues adelante! vamos a darle esos últimos retoques a nuestra shell. Si decides no continuar con esta parte puedes dirigirte a la sección de más abajo <strong>POWERLEVEL10K PARA EL SUPER USUARIO</strong></p>
 <hr>
 <p>Bien, comencemos quitando ese componente de la derecha del todo ya que a mí no termina de convencerme, para eso nos dirigiremos al archivo editable de la p10k.</p>
-<p><code>nano ~/.p10k.zsh </code></p>
-<p>Donde como dije, quitaremos los elemento de la derecha.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">nano ~/.p10k.zsh 
+</span></code></pre></div><p>Donde como dije, quitaremos los elemento de la derecha.
 Para ello comentaremos todas las líneas de la lista de elementos de la derecha, desde &ldquo;status&rdquo; hasta &ldquo;example&rdquo;.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/right_bar1.jpg?raw=true" alt="right bar">
 <img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/end_right_bar.jpg?raw=true" alt="right bar end"></p>
@@ -278,43 +281,55 @@ Para ello comentaremos todas las líneas de la lista de elementos de la derecha,
 <p>En el archivo ~/p10k.zsh puedes configurar absolutamente todo del tema, desde íconos hasta colores pero eso excede al alcance de este pequeño tutorial.</p>
 <hr>
 <h2 id="powerlevel10k-para-el-super-usuario">POWERLEVEL10K PARA EL SUPER USUARIO</h2>
-<p>Si nos colocamos como SUPER USUARIO <code>sudo su</code> veremos que nuestra shell tuneada no está igual y eso es un poco triste, pero basta con realizar los mismos pasos que hicimos como usuarios normales. Solo la instalación de la powerlevel10k y la configuración de la misma (lo del diamante).</p>
+<p>Si nos colocamos como SUPER USUARIO</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">sudo su
+</span></code></pre></div><p>veremos que nuestra shell tuneada no está igual y eso es un poco triste, pero basta con realizar los mismos pasos que hicimos como usuarios normales. Solo la instalación de la powerlevel10k y la configuración de la misma (lo del diamante).</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/root.jpg?raw=true" alt="sudo su"></p>
-<p>Para instalar la powerlevel10k en el super usuario primero debemos instalarla, para ello ejecutaremos el siguiente comando.</p>
+<p>Para instalar la powerlevel10k en elsuper usuario primero debemos instalarla, para ello ejecutaremos el siguiente comando.</p>
 <p><code>git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' &gt;&gt;~/.zshrc</code></p>
-<p>Despues de ejecutar el comando de arriba debemos teclear <code>zsh</code> para acceder a la pantalla que nos muestra el diamante y a partir de aquí puede ejecutar exactamente los mismos pasos que en el apartado de <strong>CONFIGURACION DE LA POWERLEVEL10K</strong> y obtendremos el siguiente resultado.</p>
+<p>Despues de ejecutar el comando de arriba debemos teclear</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">zsh
+</span></code></pre></div><p>para acceder a la pantalla que nos muestra el diamante y a partir de aquí puede ejecutar exactamente los mismos pasos que en el apartado de <strong>CONFIGURACION DE LA POWERLEVEL10K</strong> y obtendremos el siguiente resultado.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/after_root.jpg?raw=true" alt="after root"></p>
 <p>Para realizar la configuración de quitar los elementos de la derecha es el mismo procedimiento, entramos al archivo.</p>
-<p><code>nano ~/.p10k.zsh</code></p>
-<p>Y comentamos todos los elementos de la derecha, desde &ldquo;status&rdquo; hasta &ldquo;example&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">nano ~/.p10k.zsh
+</span></code></pre></div><p>Y comentamos todos los elementos de la derecha, desde &ldquo;status&rdquo; hasta &ldquo;example&rdquo;.</p>
 <p>Y agregaremos los mismos 3 elementos a la izquierda, status,command_execution_time y context.</p>
-<p>Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como super usuario una vez mas <code>sudo su</code> y tecleamos <code>zsh</code> para ver nuestros cambios Pero&hellip; no tenemos un identificador que usuario somos, si normal o super usuario por lo que debemos hacer unos ajustes.</p>
+<p>Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como super usuario una vez mas</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">sudo su
+</span></code></pre></div><p>y tecleamos</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">zsh
+</span></code></pre></div><p>para ver nuestros cambios Pero&hellip; no tenemos un identificador que usuario somos, si normal o super usuario por lo que debemos hacer unos ajustes.</p>
 <p>Como sabemos el identificador de super usuario suele ser el simbolo gato &ldquo;#&rdquo;, por lo que es lo que agregaremos a continuación, para sustituir todo el texto de &ldquo;with root@desktop..&rdquo;.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/root_with.jpg?raw=true" alt="root with"></p>
-<p>Nuevamente ingresamos a <code>nano ~/.p10k.zsh</code> y realizaremos los siguientes cambios. Ya dentro del archivo si lo abrimos con el editor nano presionaremos la combinación &ldquo;ctrl w&rdquo; para abrir el buscador del editor y escribiremos &ldquo;root_template&rdquo; para que nos lleve al apartado que nos interesa.</p>
+<p>Nuevamente ingresamos a</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">nano ~/.p10k.zsh
+</span></code></pre></div><p>y realizaremos los siguientes cambios. Ya dentro del archivo si lo abrimos con el editor nano presionaremos la combinación &ldquo;ctrl w&rdquo; para abrir el buscador del editor y escribiremos &ldquo;root_template&rdquo; para que nos lleve al apartado que nos interesa.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/root_template.jpg?raw=true" alt="root template"></p>
-<p>Y comentaremos la línea que dice &quot; typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith ' &ldquo;.</p>
+<p>Y comentaremos la línea que dice <strong>typeset -g POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith &lsquo;</strong>.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/root_template_comment.jpg?raw=true" alt="root template commet"></p>
 <p>Para poner el simbolo de &ldquo;#&rdquo; lo tomaremos de la página de <a href="https://www.nerdfonts.com/cheat-sheet">Nerd-fonts</a>, nos dirigiremos a la sección de íconos donde buscaremos &ldquo;hashtag&rdquo; y copiaremos el ícono que nos muestra.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/copy_icon.jpg?raw=true" alt="icon font"></p>
-<p>Ahora volvemos a nuestro archivo <code>.p10k.zsh</code> y en la línea</p>
-<p>&quot;  # Context format when running with privileges: bold user@hostname.
-typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=&lsquo;&rsquo;&rdquo; &quot;</p>
+<p>Ahora volvemos a nuestro archivo <strong><code>.p10k.zsh</code></strong> y en la línea</p>
+<p><strong># Context format when running with privileges: bold user@hostname.</strong>
+<strong>typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=&lsquo;&rsquo;'</strong></p>
 <p>pegamos nuestro hashtag despues del igual.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/hashtag_changing.jpg?raw=true" alt="hashtag"></p>
-<p>Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como super usuario una vez mas <code>sudo su</code> y tecleamos <code>zsh</code> para ver nuestros cambios, sé que hacer estos pasos pueden ser algo redundantes y es por eso que en el siguiente punto lo que haremos será establecer la zsh como la shell predeterminada para todos los usuarios.</p>
+<p>Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como super usuario una vez mas <strong><code>sudo su</code></strong> y tecleamos <strong><code>zsh</code></strong> para ver nuestros cambios, sé que hacer estos pasos pueden ser algo redundantes y es por eso que en el siguiente punto lo que haremos será establecer la zsh como la shell predeterminada para todos los usuarios.</p>
 <hr>
 <h2 id="estableciendo-zsh-como-shell-default-para-todos-los-usuarios-del-sistema">ESTABLECIENDO ZSH COMO SHELL DEFAULT PARA TODOS LOS USUARIOS DEL SISTEMA</h2>
 <p>Si ejecutamos el comando</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cat /etc/passwd | grep -E &#34;^root|^washiprah&#34; 
-</code></pre></div><p>sin miedo, solo es para listar la shell de estos dos usuarios uwu (donde washiprah lo sustituirá por su usuario)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">cat /etc/passwd | grep -E &#34;^root|^washiprah&#34;
+</span></code></pre></div><p>sin miedo, solo es para listar la shell de estos dos usuarios uwu (donde washiprah lo sustituirá por su usuario)
 nos daremos cuenta que solo el usuario del sistema tiene la zsh como default, pero el root(super usuario) y los demás usuarios que agreguemos tendrán por defecto la bash.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/default_bash.jpg?raw=true" alt="default bash"></p>
-<p>Para realizar esto debemos ejecutar la siguiente línea de código en la shell pero estando como super usuario <code>sudo su</code> y despues tecleamos <code>zsh</code>.</p>
-<p><code>usermod --shell /usr/bin/zsh root</code></p>
-<p>Volvemos a ejecutar el comando <code>cat /etc/passwd | grep -E &quot;^root|^washiprah&quot;</code> y podemos observar que ahora tanto el usuario normal como el super usuario tienen por defecto una shell zsh y se verá así.</p>
+<p>Para realizar esto debemos ejecutar la siguiente línea de código en la shell pero estando como super usuario <strong><code>sudo su</code></strong> y despues tecleamos <strong><code>zsh</code></strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">usermod --shell /usr/bin/zsh root
+</span></code></pre></div><p>Volvemos a ejecutar el comando</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="go">cat /etc/passwd | grep -E &#34;^root|^washiprah&#34;
+</span></code></pre></div><p>y podemos observar que ahora tanto el usuario normal como el super usuario tienen por defecto una shell zsh y se verá así.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/zsh_both.jpg?raw=true" alt="zsh default"></p>
-<p>Ahora si ejecutamos <code>sudo su</code> veremos que nuestra shell para usuario y super usuario es una zsh (nota, para salir de super usuario debemos teclear &ldquo;exit&rdquo;). :D al fin!</p>
+<p>Ahora si ejecutamos <strong><code>sudo su</code></strong> veremos que nuestra shell para usuario y super usuario es una zsh (nota, para salir de super usuario debemos teclear &ldquo;exit&rdquo;). :D al fin!</p>
 <p>Hemos terminado este pequeño tutorial donde tuneamos nuestra shell, como dije, powerlevel10k nos permite personalizar tanto como querramos nuestra shell, desde colores, íconos, fuentes, y adicional con zsh podemos tener pluggins que nos ayudan en cuanto a productividad pero esto se encuentra en su documentación en <a href="https://github.com/romkatv/powerlevel10k">github</a>.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/washiprah.jpg?raw=true" alt="sell"></p>
 <hr>
@@ -356,6 +371,10 @@ algunas configuraciones extras que tengo en mi windows terminal, para este pundo
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/final_washi_config.jpg?raw=true" alt="last configurations"></p>
 </li>
 </ul>
+<h3 id="seleccionando-ubuntu-como-perfil-predeterminado-en-windows-terminal">Seleccionando ubuntu como perfil predeterminado en windows terminal.</h3>
+<p>Para asignar ubuntu como perfil predeterminado para la windows terminal nos dirigiremos a Configuración&gt;Inicio. Donde está la opción de &ldquo;Perfil predeterminado&rdquo;, seleccionamos ubuntu y guardamos.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/z-inicio.jpg?raw=true" alt="default profile"></p>
+<p>y con esto cada vez que abramos la terminal nos mostrará el perfil que acabamos de configurar y no la powershell como la primer vez que la ejecutamos.</p>
 <hr>
 <p>Windows Terminal nos permite crear diferentes combinaciones de configuración, personalizandolo a nuestras preferencias y sería bueno explorarlo para llegar a nuestra propia combinación ganadora.</p>
 <p>Por mi parte es todo en este post y espero les haya sido de ayuda, nos vemos en los siguientes que tengo en mente.</p>
