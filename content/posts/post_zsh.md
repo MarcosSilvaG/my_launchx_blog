@@ -333,8 +333,10 @@ Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como 
 
 ## ESTABLECIENDO ZSH COMO SHELL DEFAULT PARA TODOS LOS USUARIOS DEL SISTEMA
 
-Si ejecutamos el comando ```
-cat /etc/passwd | grep -E "^root|^washiprah" ``` 
+Si ejecutamos el comando 
+```
+cat /etc/passwd | grep -E "^root|^washiprah" 
+``` 
 sin miedo, solo es para listar la shell de estos dos usuarios uwu (donde washiprah lo sustituirá por su usuario)
 nos daremos cuenta que solo el usuario del sistema tiene la zsh como default, pero el root(super usuario) y los demás usuarios que agreguemos tendrán por defecto la bash.
 
