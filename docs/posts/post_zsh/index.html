@@ -305,8 +305,9 @@ typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE=&lsquo;&rsquo;&rdquo; &quot;</p
 <p>Reiniciamos la shell una vez mas (cerrarla y abrir una nueva), nos ponemos como super usuario una vez mas <code>sudo su</code> y tecleamos <code>zsh</code> para ver nuestros cambios, sé que hacer estos pasos pueden ser algo redundantes y es por eso que en el siguiente punto lo que haremos será establecer la zsh como la shell predeterminada para todos los usuarios.</p>
 <hr>
 <h2 id="estableciendo-zsh-como-shell-default-para-todos-los-usuarios-del-sistema">ESTABLECIENDO ZSH COMO SHELL DEFAULT PARA TODOS LOS USUARIOS DEL SISTEMA</h2>
-<p>Si ejecutamos el comando <code>cat /etc/passwd | grep -E &quot;^root|^washiprah&quot;</code>
-sin miedo, solo es para listar la shell de estos dos usuarios uwu (donde washiprah lo sustituirá por su usuario)
+<p>Si ejecutamos el comando</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">cat /etc/passwd | grep -E &#34;^root|^washiprah&#34; 
+</code></pre></div><p>sin miedo, solo es para listar la shell de estos dos usuarios uwu (donde washiprah lo sustituirá por su usuario)
 nos daremos cuenta que solo el usuario del sistema tiene la zsh como default, pero el root(super usuario) y los demás usuarios que agreguemos tendrán por defecto la bash.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/zsh/default_bash.jpg?raw=true" alt="default bash"></p>
 <p>Para realizar esto debemos ejecutar la siguiente línea de código en la shell pero estando como super usuario <code>sudo su</code> y despues tecleamos <code>zsh</code>.</p>
