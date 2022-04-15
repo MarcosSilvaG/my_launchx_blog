@@ -71,9 +71,9 @@ Ahora necesitaremos instalar la shell zsh en nuestro wsl o wsl2, es algo fácil 
 
 1. Ejecutaremos primero 2 lineas de comando, la primera para actualizar los paquetes disponibles y sus versiones, y el segundo para instalar o actualizar los paquetes que el comando anterior encontró y listó (cuando lo ejecutemos nos pedirá la contraseña sudo, es la que configuramos una vez se instaló WSL).
 
-    `sudo apt-get update`
-    
-    `sudo apt-get upgrade`
+    ```console
+    sudo apt-get update
+    sudo apt-get upgrade```
 
 2. Una vez se haya terminado de realizar el upgrade instalaremos la zsh con la siguiente línea .
     
