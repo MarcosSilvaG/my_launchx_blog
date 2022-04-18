@@ -66,16 +66,16 @@
 <ol>
 <li>
 <p>1.Primero nos dirigiremos a nuestro directorio dónde pondremos nuestros plugins dentro de oh-my-zsh, con el siguiente comando de consola.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">   ~/ <span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins/
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins/
 </code></pre></div></li>
 <li>
 <p>2.Una vez dentro del directorio &ldquo;pluggins&rdquo; clonaremos el repositorio de &ldquo;autosuggestion&rdquo; con <strong>git clone</strong> <a href="https://github.com/zsh-users/zsh-autosuggestions.git">Link al repositorio</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">   ~/.oh-my-zsh/cu/plugins  on   master  git clone https://github.com/zsh-users/zsh-autosuggestions.git
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/zsh-users/zsh-autosuggestions.git
 </code></pre></div><p>y esperaremos a que termine de clonar el repositorio.</p>
 </li>
 <li>
 <p>3.Ya clonado el repositorio agregaremos el plugin al archivo de <strong>zshrc</strong> , para ello nos introduciremos en él.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">▓    ~/.oh-my-zsh/cu/plugins  on   master  nano ~/.zshrc
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">nano ~/.zshrc
 </code></pre></div><p>Presionaremos la combinación de teclas (en el editor nano) <strong>ctrl w</strong> para que nos abra el buscador y buscaremos &ldquo;plugins&rdquo;.</p>
 <p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/search_plugins.jpg?raw=true" alt="search plugins"></p>
 <p>agregaremos la línea <strong>zsh-autosuggestions</strong></p>
@@ -84,7 +84,7 @@
 </li>
 <li>
 <p>4.Ya en la línea de consola escribiremos</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">    ~/.oh-my-zsh/cu/plugins  on   master  <span class="nb">source</span> ~/.zshrc
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> ~/.zshrc
 </code></pre></div><p>Esto para ejecturar el archivo y una vez termine cargará los cambios que hicimos en él.</p>
 </li>
 <li>
