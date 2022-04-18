@@ -14,12 +14,12 @@
   
 
   
-    <meta name="description" content="En este post mostraré los pasos necesarios para instalar un pluggin que predice comandos para zsh"/>
+    <meta name="description" content="En este post mostraré los pasos necesarios para instalar un pluggin que predice comandos para zsh y nos ayuda a aumentar la ágilidad en la shell"/>
     <meta property="og:title" content="INSTALACIÓN DEL PLUGGIN AUTOSUGGESTION PARA OH-MY-ZSH"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://marcossilvag.github.io/my_launchx_blog/posts/autosuggestion/"/>
     
-    <meta property="og:description" content="En este post mostraré los pasos necesarios para instalar un pluggin que predice comandos para zsh"/>
+    <meta property="og:description" content="En este post mostraré los pasos necesarios para instalar un pluggin que predice comandos para zsh y nos ayuda a aumentar la ágilidad en la shell"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@washiprah"/>
     <meta name="twitter:creator" content="@washiprah"/>
@@ -59,7 +59,52 @@
       
     </div>
     <div class="content">
-      
+      <p>En un post anterior mostraba cómo instalar zsh y oh-my-zsh y en él hablaba un póco de cómo esta shell nos ayudaba a ser más productivos gracias a la posibilidad de instalar plugins que nos facilitaran tareas repetitivas.</p>
+<p>En esta ocasión estaré mostrando los pasos necesarios para instalar un pluggin de sugerencia de palabras en la terminal para no tener que escribir 2 veces comandos largos.</p>
+<p>Al final del post nuestra terminal podrá sugerirnos palabras o comandos completos a partir de las letras que vayamos escribiendo.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/sudo_autosuggestion.jpg?raw=true" alt="root autosugges"></p>
+<ol>
+<li>
+<p>1.Primero nos dirigiremos a nuestro directorio dónde pondremos nuestros plugins dentro de oh-my-zsh, con el siguiente comando de consola.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">   ~/ <span class="nb">cd</span> ~/.oh-my-zsh/custom/plugins/
+</code></pre></div></li>
+<li>
+<p>2.Una vez dentro del directorio &ldquo;pluggins&rdquo; clonaremos el repositorio de &ldquo;autosuggestion&rdquo; con <strong>git clone</strong> <a href="https://github.com/zsh-users/zsh-autosuggestions.git">Link al repositorio</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">   ~/.oh-my-zsh/cu/plugins  on   master  git clone https://github.com/zsh-users/zsh-autosuggestions.git
+</code></pre></div><p>y esperaremos a que termine de clonar el repositorio.</p>
+</li>
+<li>
+<p>3.Ya clonado el repositorio agregaremos el plugin al archivo de <strong>zshrc</strong> , para ello nos introduciremos en él.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">▓    ~/.oh-my-zsh/cu/plugins  on   master  nano ~/.zshrc
+</code></pre></div><p>Presionaremos la combinación de teclas (en el editor nano) <strong>ctrl w</strong> para que nos abra el buscador y buscaremos &ldquo;plugins&rdquo;.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/search_plugins.jpg?raw=true" alt="search plugins"></p>
+<p>agregaremos la línea <strong>zsh-autosuggestions</strong></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/plugin_add.jpg?raw=true" alt="add line"></p>
+<p>Guardaremos <strong>ctrl s</strong> y saldremos del editor <strong>ctrl x</strong></p>
+</li>
+<li>
+<p>4.Ya en la línea de consola escribiremos</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">    ~/.oh-my-zsh/cu/plugins  on   master  <span class="nb">source</span> ~/.zshrc
+</code></pre></div><p>Esto para ejecturar el archivo y una vez termine cargará los cambios que hicimos en él.</p>
+</li>
+<li>
+<p>5.Listo! si todo ha salido bien veremos que si escribimos una letra automaticamente nos aparecerá una sugerencia de comando.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/suggestion.jpg?raw=true" alt="example"></p>
+<p>Y para que nos autocomplete el comando sugerido presionaremos la tecla direccional derecha &quot; &gt; &quot;</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/autosuggest/suggestion_done.jpg?raw=true" alt="autosuggest"></p>
+</li>
+</ol>
+<p>Estos pasos sólo instalarán el autocompletado en el contexto del usuario actual, esto quiere decir que si estás como usuario normal deberás ponerte en modo super usuario (root)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo su
+</code></pre></div><p>E iniciar desde el paso uno para también tenerlo ahí.
+Y si estás como super usuario (root) deberás salir de ese contexto tecleando</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+</code></pre></div><p>Para volver como usuario normal y ejercutar desde el paso 1 nuevamente.</p>
+<hr>
+<p>Si bien el tab es nuestro amigo incondicional para autocompletar comandos en la línea de comandos, una herramienta que nos permita ver un comando un tanto complejo y largo, nos permita escribirlo de manera tan rápida nunca viene tan mal.</p>
+<p>Este es solo un ejemplo de lo que zsh es capáz, podemos instalarle los plugins que querramos y que nos hagan el ambiente de desarrollo mas ágil.</p>
+<p>Por mi parte es todo en este pequeño post, aún tengo un par más en mente que iré desarrollando de a poco. Un saludo a todos y hasta los próximos!!</p>
+
     </div>
   </div>
 

@@ -13,7 +13,9 @@
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://marcossilvag.github.io/my_launchx_blog/posts/autosuggestion/</guid>
-      <description></description>
+      <description>En un post anterior mostraba cómo instalar zsh y oh-my-zsh y en él hablaba un póco de cómo esta shell nos ayudaba a ser más productivos gracias a la posibilidad de instalar plugins que nos facilitaran tareas repetitivas.
+En esta ocasión estaré mostrando los pasos necesarios para instalar un pluggin de sugerencia de palabras en la terminal para no tener que escribir 2 veces comandos largos.
+Al final del post nuestra terminal podrá sugerirnos palabras o comandos completos a partir de las letras que vayamos escribiendo.</description>
     </item>
     
     <item>
