@@ -13,19 +13,19 @@ Al final del post nuestra terminal podrá sugerirnos palabras o comandos complet
 
 1. 1.Primero nos dirigiremos a nuestro directorio dónde pondremos nuestros plugins dentro de oh-my-zsh, con el siguiente comando de consola.
 
-    ```zsh
-       ~/ cd ~/.oh-my-zsh/custom/plugins/
+    ```bash
+    cd ~/.oh-my-zsh/custom/plugins/
     ```
 
 2. 2.Una vez dentro del directorio "pluggins" clonaremos el repositorio de "autosuggestion" con **git clone** [Link al repositorio](https://github.com/zsh-users/zsh-autosuggestions.git)
     ```bash
-       ~/.oh-my-zsh/cu/plugins  on   master  git clone https://github.com/zsh-users/zsh-autosuggestions.git
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git
     ```
     y esperaremos a que termine de clonar el repositorio.
 
 3. 3.Ya clonado el repositorio agregaremos el plugin al archivo de **zshrc** , para ello nos introduciremos en él.
     ```bash
-    ▓    ~/.oh-my-zsh/cu/plugins  on   master  nano ~/.zshrc
+    nano ~/.zshrc
     ```
     Presionaremos la combinación de teclas (en el editor nano) **ctrl w** para que nos abra el buscador y buscaremos "plugins".
     
@@ -39,7 +39,7 @@ Al final del post nuestra terminal podrá sugerirnos palabras o comandos complet
 
 4. 4.Ya en la línea de consola escribiremos
     ```bash
-        ~/.oh-my-zsh/cu/plugins  on   master  source ~/.zshrc
+    source ~/.zshrc
     ```
     Esto para ejecturar el archivo y una vez termine cargará los cambios que hicimos en él.
 
