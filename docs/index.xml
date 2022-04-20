@@ -13,7 +13,7 @@
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://marcossilvag.github.io/my_launchx_blog/posts/delete_node_modules/</guid>
-      <description>En este post explicaré una manera para poder eliminar la carpeta node_modules en caso de que por accidente la agreguemos a git y la versionamos.
+      <description>En este post explicaré una manera para poder eliminar la carpeta node_modules en caso de que por accidente la agreguemos a git y la versionemos.
   1.Antes que todo primero crearemos un archivo .gitignore para que git no vuelva a tomar en cuenta la carpeta y la ignore. Para crear dicho archivo nos posicionaremos en el directorio raíz de nuestro proyecto y escribiremos el siguiente comando.
 echo &amp;#34;**/node_modules&amp;#34; &amp;gt; .</description>
     </item>
