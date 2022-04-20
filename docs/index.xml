@@ -6,7 +6,18 @@
     <description>Recent content in Launch X Bitácora de viaje on Bitácora de Viaje de Marcos Joel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://marcossilvag.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://marcossilvag.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB</title>
+      <link>https://marcossilvag.github.io/my_launchx_blog/posts/delete_node_modules/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcossilvag.github.io/my_launchx_blog/posts/delete_node_modules/</guid>
+      <description>En este post explicaré una manera para poder eliminar la carpeta node_modules en caso de que por accidente la agreguemos a git y la versionamos.
+  1.Antes que todo primero crearemos un archivo .gitignore para que git no vuelva a tomar en cuenta la carpeta y la ignore. Para crear dicho archivo nos posicionaremos en el directorio raíz de nuestro proyecto y escribiremos el siguiente comando.
+echo &amp;#34;**/node_modules&amp;#34; &amp;gt; .</description>
+    </item>
+    
     <item>
       <title>INSTALACIÓN DEL PLUGGIN AUTOSUGGESTION PARA OH-MY-ZSH</title>
       <link>https://marcossilvag.github.io/my_launchx_blog/posts/autosuggestion/</link>
