@@ -11,9 +11,6 @@ Si bien la mayoria de sistemas operativos actuales basados en Unix vienen con un
 
 En este post repasaremos algunos de los comandos de Unix más comunes con el fin de ayudar a que la introducción a su uso sea más ameno.
 
-
-![shell](https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/linux-laptop.png?raw=true)
-
 ---
 
 ## Obtener información acerca de un comando. 👁‍🗨
