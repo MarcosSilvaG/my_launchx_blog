@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB - Bitácora de Viaje de Marcos Joel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://marcossilvag.github.io/my_launchx_blog/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="../../css/style.min.4f4767d518839223786999cdb69fc7a63791220ecccd236bc732a5f998aaee2d.css">
+  
+
+  
+    <meta name="description" content="¿Versionaste por accidente node_modules/? no te preocupes! aquí una guía para poder quitarlos de git y github!"/>
+    <meta property="og:title" content="ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://marcossilvag.github.io/my_launchx_blog/posts/basic_shell_commands/"/>
+    <meta property="og:image" content="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/linux-laptop.png"/>
+    <meta property="og:description" content="¿Versionaste por accidente node_modules/? no te preocupes! aquí una guía para poder quitarlos de git y github!"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@washiprah"/>
+    <meta name="twitter:creator" content="@washiprah"/>
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+
+
+
+
+<body class='page frame page-blog-single'>
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <a class="header-logo" href="https://marcossilvag.github.io/my_launchx_blog/">Bitácora de Viaje de Marcos Joel</a>
+  <div class="menu-main">
+    <ul>
+        
+        
+            <li class="menu-item-aboutme">
+                <a href="../../pages/about/">AboutMe</a>
+            </li>
+        
+            <li class="menu-item-posts">
+                <a href="../../posts/">Posts</a>
+            </li>
+        
+    </ul>
+  </div>
+</div>
+    
+  <div class="blog">
+    
+    <div class="intro">
+      <h1>ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB<span class="dot">.</span></h1>
+      
+      <img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/linux-laptop.png" />
+      
+    </div>
+    <div class="content">
+      <p>Si son tus primeros pasos en Sistemas Operativos basados en Unix la línea de comandos podría parecer algo intimidante. Sin embargo no es tan dificil de usar. Todo lo que necesita para comenzar a utilizar la shell es aprender un par de comandos básicos y, además, útiles para su día a día.</p>
+<p>Si bien la mayoria de sistemas operativos actuales basados en Unix vienen con una interfaz gráfica integrada y que además es fácil de usar, la línea de comandos es una herramienta que es de mucha utilidad que nos brinda más poder sobre nuestro Sistema operativo y acceso a funciones que de otra manera no serian posibles de usar mediante la interfaz gráfica.</p>
+<p>En este post repasaremos algunos de los comandos de Unix más comunes con el fin de ayudar a que la introducción a su uso sea más ameno.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/linux-laptop.png?raw=true" alt="shell"></p>
+<hr>
+<h2 id="obtener-información-acerca-de-un-comando-">Obtener información acerca de un comando. 👁‍🗨</h2>
+<p>Casi todos los comandos cuentan con más de una opción para su uso. Intentar memorizar todos los comandos y además, todas sus opciones sería una locura.
+Por lo que Unix nos ofrece un par de comandos para ver todas las opciones de un comando en especifico.</p>
+<h3 id="comando---help">Comando <strong>&ndash;help</strong></h3>
+<p>El comando <strong>&ndash;help</strong> nos devuelve una lista de los argunmentos de un determinado comando.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">command_name --help
+</code></pre></div><p>Si necesitamos saber las opciones de un comando primero escribiremos el nombre de dicho commando seguido de <strong>&ndash;help</strong> y se nos listarán las opciones mas importantes.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/cat%20help.jpg?raw=true" alt="help cat"></p>
+<h3 id="comando-man">Comando <strong>man</strong></h3>
+<p>Casi todos los comandos de Unix se distribuyen con una archivo man o &ldquo;manual&rdquo;, es una forma de documentación que explica qué funciones realiza el comando, ejemplos de cómo utilizar el comando y además los argumentos que este acepta.</p>
+<p>El comando man se utiliza para mostrar la página del manual de un comando determinado.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">man command_name
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/man%20cat.jpg?raw=true" alt="man cat"></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/man%20cat%202.jpg?raw=true" alt="man cat 2"></p>
+<hr>
+<h2 id="navegando-por-el-sistema-de-archivos-">Navegando por el sistema de archivos. 📂</h2>
+<p>En linux cada archivo o directorio se encuentra debajo del directorio <strong>root</strong>, que es el primer directorio en el árbol de directorios. Se hace referencia al directorio <strong>root</strong> con una sola barra inclinada <strong>/</strong>.</p>
+<p>En esta sección veremos los comandos utilizados para movernos entre directorios.</p>
+<h3 id="comando-pwd-print-working-directory">Comando <strong>pwd</strong> (Print Working Directory)</h3>
+<p>Cada vez que trabajamos con una shell estamos trabajando dentro de un directorio.</p>
+<p><strong>pwd</strong> nos ayuda a saber en qué directorio nos encontramos actualmente.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/pwd.jpg?raw=true" alt="pwd"></p>
+<p>El comando muestra la ruta completa del directorío en el que nos encontramos.</p>
+<h3 id="comando-cd-change-directory">Comando <strong>cd</strong> (&ldquo;change directory&rdquo;)</h3>
+<p>Este comando nos sirve para cambiar(movernos) de directorio en los sistemas basados en Unix.</p>
+<p>Cuando no utilizamos ningún argumento <strong>cd</strong> nos lleva al directorio de inicio.</p>
+<p>Supongamos que queremos movernos al directorio &ldquo;prácticas&rdquo; que se encuentra en mi sistema.</p>
+<p>Para cambiar a un directorio podemos usar el nombre de la ruta absoluta o relativa.</p>
+<p>Ruta absoluta(completa): Comienza desde el directorio <strong>root</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /home/washiprah/practicas
+</code></pre></div><p>Ruta relativa: Relativo a un directorio actual.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> practicas
+</code></pre></div><p>Dos puntos (<strong>..</strong> ) uno seguido de otro representa al directorio principal, o viendolo de otra manera, al directorio inmediatamente superior al actual.</p>
+<p>Retomando el ejemplo anterior: nos encontramos en el directorio</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/home/washiprah/practicas
+</code></pre></div><p>Para cambiar al directorio</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/home/washiprah
+</code></pre></div><p>que se encuentra un nivel por encima de nuestro directorio actual, debemos escribir</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ..
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/cd%20punto.jpg?raw=true" alt="cd dos puntos"></p>
+<p>Para subir dos niveles podemos poner</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ../../
+</code></pre></div><p>Lo cuál nos dejaria en el directorio de</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/home/
+</code></pre></div><p>Para poder volver al directorio del cual recien salimos con los dos puntos (<strong>..</strong>) podemos usar</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> -
+</code></pre></div><p>En caso de que un directorio tenga espacios en su nombre,debemos utilizar una barra invertida por cada espacio \ para &ldquo;escaparlos&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> practicas<span class="se">\ </span>blog
+<span class="nb">cd</span> practics<span class="se">\ </span>blog<span class="se">\ </span>con<span class="se">\ </span>espacios
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/nombre%20con%20espacios.jpg?raw=true" alt="escape de espacios"></p>
+<hr>
+<h2 id="trabajando-con-archivos-y-directorios-">Trabajando con archivos y directorios. 📁📝</h2>
+<h3 id="comando-ls">Comando <strong>ls</strong></h3>
+<p>El comando <strong>ls</strong> posiblemente sea uno de los que más utilizarás ya que nos permite listar todos los archivos y directorios que se encuentran dentro de un directorio dado.</p>
+<p>Cuando lo utilizamos sin argumentos ni opciones <strong>ls</strong> nos muestra una lista en orden alfabético de los nombres de todos los archivos que se encuentran en el directorio de trabajo actual:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ls
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/ls%20sin%20args.jpg?raw=true" alt="imagen ls"></p>
+<p>Para listar los archivos de un directorio especifico sin la necesidad de entrar a el debemos pasar la ruta al directorio como argumento:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ls weekly_mission_1
+</code></pre></div><p>Por defecto <strong>ls</strong> muestra solo los nombres de los archivos y directorios, utilizando <strong>ls -l</strong> podemos imprimir una lista larga que nos muestra más información , como el tipo de archivo, los permisos, el propietario, el grupo, el tamaño, la fecha y el nombre del archivo.</p>
+<blockquote>
+<p>Sobre el tema de permisos,grupos y propietarios hablaré en otro post 👀👀</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ls -l weekly_mission_1
+</code></pre></div><p>Para tener un resultado similar podemos utilizar <strong>ll</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ll weekly_mission_1
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/ls%20l.jpg?raw=true" alt="ls l"></p>
+<p>El comando <strong>ls</strong> no enumera los archivos &ldquo;ocultos&rdquo; de manera predeterminada. Con archivo oculto me refiero a un archivo que comienza con <strong>.</strong> (.gitignore, .git, etc).</p>
+<p>Para mostrar todos los archivos incluidos los ocultos podemos utilizar <strong>ls -a</strong>  y si lo queremos en manera de lista general podemos utilizar <strong>ll -a</strong> (podemos sustituir ls casi siempre por ll, lo unico que cambiará será la manera en la que se nos muestra en pantalla el listado de archivos y directorios, en lo personal utilizo más <strong>ll</strong> porque encuentro mas legible los archivos de arriba hacia abajo).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ls -a
+o
+ll -a
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/lla.jpg?raw=true" alt="ll a"></p>
+<blockquote>
+<p>recuerda que para ver el resto de opciones del comando ls puedes ejecutar <strong>ls &ndash;help</strong></p>
+</blockquote>
+<hr>
+<h2 id="visualización-del-contenido-de-un-archivo-">Visualización del contenido de un archivo. 📑👀</h2>
+<h3 id="comando-cat">Comando <strong>cat</strong></h3>
+<p>Este comando nos permite imprimir en consola el contenido de uno o más archivos y fusiona (concatena) archivos agregando el contenido de un archivo al final del otro.</p>
+<p>Para mostrar el contenido pase el nombre del archivo y/o archivos como argumentos.</p>
+<p>Ejemplo con archivos <strong>hola</strong> y <strong>mundo</strong> previamente creados:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat hola mundo
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/cat%20hola%20mundo.jpg?raw=true" alt="cat hola mundo"></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/cat%20pokemon.jpg?raw=true" alt="cat pokemon"></p>
+<p>Es de gran utilidad el poder ver el contenido de un archivo sin siquiera abrirlo para tener una idea de su contenido o hacer una busqueda rápida en él.</p>
+<blockquote>
+<p>En un próximo post hablaré sobre una herramienta que nos ayuda a ponerle esteroides a nuestro comando cat para hacerlo mas legible aún <strong>batcat</strong> 👀</p>
+</blockquote>
+<hr>
+<h2 id="creación-de-archivos-">Creación de archivos. 🖌📝</h2>
+<p>Existen direferentes maneras de crear archivos desde la linea de comandos, aquí te muestro un par de ellas.</p>
+<h3 id="comando-touch">Comando <strong>touch</strong></h3>
+<p>Con este comando podemos crear uno o varios archivos vacíos de la siguiente manera. <strong>touch &lt;nombre del archivo&gt;</strong>.
+Si el archivo que deseamos crear es para utilizarlo para una tecnología en especifico debemos agregar la terminación que nos indica la documentación de dicha tecnologia como pueden ser python: .py, javascript: .js, markdown: .md, etc&hellip;</p>
+<p>En el siguiente ejemplo la primer linea crea solo un archivo javascript y en la segunda línea varios archivos de diferente extensión.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">touch archivo1.js
+touch archivo1.js archivo2.md archivo3.py
+</code></pre></div><p>Si queremos crear archivos dentro de carpetas ya existentes debemos utilizar la siguiente nomenclatura.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">touch carpeta1/subcarpeta1/pokemon.js carpeta2/subcarpeta2/pokemon.test.js
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/touch%20sub.jpg?raw=true" alt="touch sub"></p>
+<p>Ahora bien,si lo que deseamos es crear más de un archivo en una dirección especifica que no es nuestro directorio de trabajo actual, tendremos que utilizar llaves (<strong>{}</strong>) y los nombres de los archivos separados con comas (<strong>,</strong>) para separar los nombres ya que de lo contrario el primer archivo si lo crearía en la ruta que pusimos, pero si el segundo lo ponemos con espacio lo crearia en el directorio de trabajo actual.</p>
+<p><strong>❌NO HACER ESTO❌</strong></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/no%20hacer%20esto.jpg?raw=true" alt="no hacer esto"></p>
+<p><strong>✅HACER ESTO✅</strong></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/hacer%20esto.jpg?raw=true" alt="hacer esto touch"></p>
+<h3 id="comando-echo-para-creación-de-archivos">Comando <strong>echo</strong> para creación de archivos.</h3>
+<p>El comando además de ser un tipo de <strong>print</strong> para consola nos permite crear archivos con contenido.</p>
+<p>Para su uso debemos utilizar la siguiente nomenclatura:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;contenido aquí&#34;</span> &gt; archivo
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/echo.jpg?raw=true" alt="echo"></p>
+<p>Es especialmente util para crear archivos con información de una manera rápida sin tener que abrir un editor de texto.</p>
+<hr>
+<h2 id="creación-de-directorios-">Creación de directorios. 🖌📁</h2>
+<h3 id="comando-mkdir-make-a-directory">Comando <strong>mkdir</strong> (make a directory)</h3>
+<p>Podemos crear nuevos directorios (carpetas) usando este comando, para crear un nuevo directorio debemos pasar como argumento el nombre o si queremos crear varios directorios debemos pasar los nombres de cada directorio separados por espacio.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir carpeta1
+mkdir carpeta1 carpeta2 carpeta3
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/mkdir.jpg?raw=true" alt="mkdir"></p>
+<p><strong>mkdir</strong> también nos permite crear directorios dentro de directorios, con la condición de que al direcotorio al que le querramos crear una subcarpeta ya exista.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> mkdir carpeta1/subcarpeta1 carpeta2/subcarpeta2 carpeta3/subcarpeta3
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/mkdir%20sub.jpg?raw=true" alt="sub mkdir"></p>
+<hr>
+<h2 id="eliminación-de-archivos-y-directorios-">Eliminación de archivos y directorios. ✂📑📂</h2>
+<h3 id="comando-rm">Comando <strong>rm</strong></h3>
+<p>Por defecto este comando no elimina directorios que no elimina directorios. Tampoco pregunta al usuario si desea continuar con la eliminarción de un archivo por lo que debemos estar atentos al utilizarlo.</p>
+<h3 id="eliminar-archivos">Eliminar archivos.</h3>
+<p>Para eliminar un archivo debemos poner el comando seguido del nombre del archivo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rm hello.py
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/rm%20py.jpg?raw=true" alt="rm py"></p>
+<p>rm acepta uno o más nombres de archivos o directorios(carpetas) como argumentos.</p>
+<p>Si colocamos la opción <strong>-i</strong> al utilizar rm, este nos preguntará si deseamos eliminar el archivo.</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/rm%20i.jpg?raw=true" alt="rm i"></p>
+<p>Recuerda que si tienes mas de un archivo los puedes eliminar todos utilizando el simbolo de asterisco (*) por ejemplo si tienes mas de un archivo js puedes poner:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rm *.js
+</code></pre></div><p>Con lo cual eliminaria todos los archivos .py del directorio de trabajo actual o si lo deseamos podemos especificar una ruta.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">rm projects/archivos/*.py
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/eliminar%20asterisco.jpg?raw=true" alt="archivos eliminados asterisco"></p>
+<h3 id="eliminar-directorioscarpetas">Eliminar directorios(carpetas).</h3>
+<p>Para eliminar directorios es necesario utilizar la opción <strong>-r</strong> para que se haga una eliminación de maner recursiva</p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/rm%20r.jpg?raw=true" alt="rm r"></p>
+<p>De esta manera eliminarmos una carpeta y todos los archivos y directorios que está tenia dentro.</p>
+<blockquote>
+<p>❌CUIDADO❌ al utilizar el comando rm ya que puedes eliminar por accidente archivos o directorios importantes, cerciorate de que los nombres que pasas como argumentos para eliminar sean los correctos!</p>
+</blockquote>
+<hr>
+<h2 id="copiar-archivos-y-directorios-">Copiar archivos y directorios. 📝➡📃</h2>
+<h3 id="comando-cp-copy-a-file">Comando <strong>cp</strong> (Copy a file)</h3>
+<p>Este comando nos permite copiar tanto archivos como directorios.</p>
+<p>Para copiar un archivo dentro del directorio de trabajo actual, se debe usar el archivo fuente (lo que se quiere copiar) como primer argumento y el nuevo archivo como segundo argumento:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cp file file_copy
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/copy.jpg?raw=true" alt="file copy"></p>
+<p>Para copiar un archivo a otro directorio, se debe especificar la ruta absoluta o relativa según sea el caso. Cuando solo se especifica el nombre del directorio como destino, el archivo copiado tendrá el mismo nombre que el archivo original.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cp pokemon.test.js ../../carpeta1
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/cp%20to%20carpeta.jpg?raw=true" alt="moviendo a carpeta"></p>
+<p>De forma predeterminada si el archivo de destino existe solo se sobreescribirá.</p>
+<p>Para copiar directorios, incluidos todos sus archivos y subdirectorios, debe utilizarse la opción <strong>-R</strong> o <strong>:-r</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cp -R carpeta2/ carpeta3/
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/carpeta3.jpg?raw=true" alt="carpeta 3"></p>
+<p>Si la carpeta a la que se mandará la copia no existe, puede nombrarla en este momento, se creará y dentro de ella se meterá la copia.</p>
+<hr>
+<h2 id="mover-y-renombrar-archivos-y-directorios-">Mover y renombrar archivos y directorios. 📝➡📂</h2>
+<h3 id="comando-mv">Comando <strong>mv</strong></h3>
+<p>Este comando puede ser utilizado tanto para mover archivos y directorios(carpetas) como para renombrarlos.</p>
+<p>Por ejemplo para mover un archivo a un directorio se utilizaria.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv archivo_a_mover.js carpeta1
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/mover%20archivo.jpg?raw=true" alt="moviendo archivo"></p>
+<p>El punto(<strong>.</strong>) al utilizar el comando mv hace referencia al directorio de trabajo actual. (me gusta decirle &ldquo;traer&rdquo; xd) de la siguiente manera podemos mover archivos o carpetas que se encuentren en otro directorio hasta el directorio en el que nos encontremos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv carpeta1/archivo_a_mover.js .
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/aqui%20punto.jpg?raw=true" alt="moviendo archivo aqui"></p>
+<p>Para mover varios archivos y directorios a la vez recuerda que el último directorio que pongamos es el directorio destino (al que le enviaremos lo que querramos)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv archivo1 archivo2 carpeta1 /&lt;carpeta-destino&gt; 
+</code></pre></div><h3 id="renombrando">Renombrando</h3>
+<p>Para cambiar el nombre de un archivo o carpeta solo hace falta recordar que el primer argumento es el archivo/directorio al que queremos cambiar el nombre, y el segundo argumento es el nombre que queremos ponerle.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mv archivo_a_mover.js archivo_renombrado.js 
+
+mv carpeta1 carpeta_renombrada
+</code></pre></div><p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/renombrado.jpg?raw=true" alt="archivo renombrado"></p>
+<p><img src="https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/carpeta%20renombrada.jpg?raw=true" alt="carpeta renombrada"></p>
+<p>No solo puedes cambiar el nombre del archivo sino también su extensión, este comando es útil cuando nos equivocamos en el nombre de archivo o directorio.</p>
+<hr>
+<h2 id="elevar-privilegios-">Elevar privilegios. 🚀</h2>
+<h3 id="comando-sudo">Comando <strong>sudo</strong></h3>
+<p>Este posiblemente sea uno de los comandos que más vas a utilizar cuando estés en la shell unix. Permite ejecutar programas como otro usuario, que por defecto es el usuario <strong>root</strong>, el usuario con mayor privilegio en nuestro sistema operativo.</p>
+<p>Usar <strong>sudo</strong> en lugar de iniciar sesión como <strong>root</strong> es más seguro porque otorga privilegios limitados a usuarios individuales sin que conozcan la contraseña de usuario <strong>root</strong>.</p>
+<blockquote>
+<p>Esto será extendido en el post de privilegios.</p>
+</blockquote>
+<p>Para usar <strong>sudo</strong> basta con que sea colocado como prefijo&hellip;</p>
+<p>Como pudiste ver en capturas de pantallas anteriores utilizo un comando <strong>tree</strong> para que se me muestren los archivos y directorios como un arbol, si lo ejecutas posiblemente te marque error, este es buen momento para usar el comando <strong>sudo</strong> , para instalar el comando tree (y casi todos los programas o comandos se instalan así en linux).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo pacman -S tree <span class="c1"># Arch Linux</span>
+$ sudo apt-get install tree <span class="c1"># Ubuntu  </span>
+$ sudo aptitude install tree <span class="c1"># Debian</span>
+</code></pre></div><p>(el comando apt-get cambiará dependiendo de tu distribución unix)</p>
+<p>En este ejemplo instalamos un comando con privilegios de root sin ser root, solo proporcionando la contraseña del propio usuario.</p>
+<hr>
+<h2 id="conclusión-">Conclusión 🚀🤖</h2>
+<p>En este post hemos cubierto alguno de los comandos mas utilizados de Unix.</p>
+<p>Si bien se pueden realizar estas tareas desde una interfaz gráfica&hellip; realizarlos desde una línea de comandos te puede hacer más productivo y puedes hacer más en menos tiempo. Aunque no se cubre en este post, la terminal te da la posibilidad de automatizar tareas repetitivas creando tus propios comandos, con lo que podrias aumentar aún mas tu productividad y agilidad.</p>
+<p>Recomiendo encarecidamente que practiques los comandos creando tus carpetas, archivos, renombrandolos&hellip;. y basicamente repitiendo lo que plasmo aquí, esto para que te acostumbres a trabajar en la terminal y pronto verás que te sentirás como pez en el agua.</p>
+<p>Por mi parte es todo y como mencioné en algunos puntos, crearé otros posts referentes a este tema ya que considero requieren su propio post.</p>
+<p>Hasta los próximos! 👽 ah sí, siganme en twitter que tengo twitter :D.</p>
+
+    </div>
+  </div>
+
+    <div class="footer">
+  
+  <div class="footer-social">
+    
+      <span class="social-icon social-icon-twitter">
+        <a href="https://twitter.com/washiprah" title="twitter" target="_blank" rel="noopener">
+          <img src="../../images/social/twitter.svg" width="24" height="24" alt="twitter"/>
+        </a>
+      </span>
+    
+      <span class="social-icon social-icon-github">
+        <a href="https://github.com/MarcosSilvaG" title="github" target="_blank" rel="noopener">
+          <img src="../../images/social/github.svg" width="24" height="24" alt="github"/>
+        </a>
+      </span>
+    
+  </div>
+  
+</div>
+  </div>
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="../../js/bundle.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+  
+
+  
+  
+
+  
+  
+  
+    
+      
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G29L9MVLG"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1G29L9MVLG');
+      </script>
+    
+  
+
+
+</body>
+</html>

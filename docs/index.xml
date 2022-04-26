@@ -9,6 +9,16 @@
     <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://marcossilvag.github.io/my_launchx_blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB</title>
+      <link>https://marcossilvag.github.io/my_launchx_blog/posts/basic_shell_commands/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcossilvag.github.io/my_launchx_blog/posts/basic_shell_commands/</guid>
+      <description>Si son tus primeros pasos en Sistemas Operativos basados en Unix la línea de comandos podría parecer algo intimidante. Sin embargo no es tan dificil de usar. Todo lo que necesita para comenzar a utilizar la shell es aprender un par de comandos básicos y, además, útiles para su día a día.
+Si bien la mayoria de sistemas operativos actuales basados en Unix vienen con una interfaz gráfica integrada y que además es fácil de usar, la línea de comandos es una herramienta que es de mucha utilidad que nos brinda más poder sobre nuestro Sistema operativo y acceso a funciones que de otra manera no serian posibles de usar mediante la interfaz gráfica.</description>
+    </item>
+    
+    <item>
+      <title>ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB</title>
       <link>https://marcossilvag.github.io/my_launchx_blog/posts/delete_node_modules/</link>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       
