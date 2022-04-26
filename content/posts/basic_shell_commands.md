@@ -9,9 +9,9 @@ Si son tus primeros pasos en Sistemas Operativos basados en Unix la línea de co
 
 Si bien la mayoria de sistemas operativos actuales basados en Unix vienen con una interfaz gráfica integrada y que además es fácil de usar, la línea de comandos es una herramienta que es de mucha utilidad que nos brinda más poder sobre nuestro Sistema operativo y acceso a funciones que de otra manera no serian posibles de usar mediante la interfaz gráfica.
 
-En este post repasaremos algunos de los comandos de Unix más comunes con el fin de ayudar a que la introducción a su uso sea más ameno.
+En este post repasaremos algunos de los comandos de Unix más comunes con el fin de ayudar a que la introducción a su uso sea más amena.
 
-Y recuera! el tab es tu mejor aliado para completar comandos, nombre de archivos y directorios, utilizalo lo más que puedas. 🤖
+Y recuerda! el tab es tu mejor aliado para completar comandos, nombre de archivos y directorios, utilizalo lo más que puedas. 🤖
 
 ---
 
