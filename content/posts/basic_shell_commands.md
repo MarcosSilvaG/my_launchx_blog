@@ -1,8 +1,8 @@
 ---
-title: "ELIMINAR CARPETA DE NODE_MODULES/ EN GIT Y GITHUB"
-date: 2022-04-20
-description: "¿Versionaste por accidente node_modules/? no te preocupes! aquí una guía para poder quitarlos de git y github!"
-image: https://github.com/MarcosSilvaG/my_launchx_blog/blob/master/static/basic_shell/linux-laptop.png
+title: "PRIMEROS PASOS EN UNA SHELL UNIX"
+date: 2022-04-25
+description: "La shell de unix es una herramienta poderosa para desarrolladores y administradores de sistemas, este post es introductorio para quienes tienen su primer acercamiento a ella."
+image: basic_shell/linux-laptop.png
 ---
 
 Si son tus primeros pasos en Sistemas Operativos basados en Unix la línea de comandos podría parecer algo intimidante. Sin embargo no es tan dificil de usar. Todo lo que necesita para comenzar a utilizar la shell es aprender un par de comandos básicos y, además, útiles para su día a día.
