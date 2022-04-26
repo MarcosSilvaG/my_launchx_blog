@@ -11,6 +11,8 @@ Si bien la mayoria de sistemas operativos actuales basados en Unix vienen con un
 
 En este post repasaremos algunos de los comandos de Unix más comunes con el fin de ayudar a que la introducción a su uso sea más ameno.
 
+Y recuera! el tab es tu mejor aliado para completar comandos, nombre de archivos y directorios, utilizalo lo más que puedas. 🤖
+
 ---
 
 ## Obtener información acerca de un comando. 👁‍🗨
